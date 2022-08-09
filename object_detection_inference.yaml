@@ -22,7 +22,7 @@ tasks:
     library: object-detection-inference
     library_version: 1.0.0
 
-    command: python3 detect.py
+    command: python3 predict.py
 
     requirements:
       cpu: 1
