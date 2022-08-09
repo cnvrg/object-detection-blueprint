@@ -131,7 +131,7 @@ tasks:
     library: object-detection-inference
     library_version: 1.0.0
 
-    command: python3 detect.py
+    command: python3 predict.py
 
     requirements:
       cpu: 1
@@ -146,7 +146,7 @@ tasks:
         value: '1'
     accept_files: true
 
-    file_name: detect.py 
+    file_name: predict.py 
     function_name: run_detections
     prep_file: '' 
     prep_function: '' 
