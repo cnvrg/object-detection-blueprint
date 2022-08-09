@@ -13,7 +13,7 @@ tags:
 
 kind: webservice
 
-command: python3 detect.py              
+command: python3 predict.py              
 
 requirements:
   cpu: 1
