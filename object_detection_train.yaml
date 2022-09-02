@@ -147,7 +147,7 @@ tasks:
     accept_files: true
 
     file_name: predict.py 
-    function_name: run_detections
+    function_name: predict
     prep_file: '' 
     prep_function: '' 
     input_schema:
