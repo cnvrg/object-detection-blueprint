@@ -7,10 +7,32 @@ Object detection refers to detecting instances of semantic objects of a certain 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 # Recreate
-This library is created to validate the input dataset format and split it into train/val/test datasets. The user needs to provide the path to two folders i.e the folder containing all the images and the folder containing all the label files.
-> 📝 **Note**: For each image in the dataset there must be a corresponding label file of the same name in .txt format. For example if there is an image called **img1.png** in the images folder then there must a corresponding label file called **img1.txt** in the labels folder.
+This library is created to validate the input dataset format and split it into train/val/test datasets. The user needs to provide the path to two folders i.e the folder containing all the images/videos and the folder containing all the label files.
+
+## Instructions to prepare the dataset
+ For each image in the dataset there must be a corresponding label file of the same name in .txt format. For example if there is an image called **img1.png** in the images folder then there must a corresponding label file called **img1.txt** in the labels folder.
+For each video in the dataset there must be a corresponding folder with the same name and extention in the labels folder. For example if there is a **train_video.mp4** there must be a folder called **train_video.mp4** in the labels folder and inside this there must be labels files for each frame of the video. The format of the labels must be the same as the format of image labels. The names of labels for each frame of the video must be as: 
+```
+frame_000000.txt 
+frame_000001.txt 
+frame_000002.txt
+...
+``` 
+or
+```
+frame_0.txt 
+frame_1.txt 
+frame_2.txt
+...
+``` 
+- Each label name must have **frame_** prefix and the frame number as postfix. 
+- You can use CVAT for labeling your videos and export the labels as **Yolo 1.1** format. 
+- Then you can copy the folder containing the labels/annotations to the training folder and rename the folder copied folder as the same name as that of the video. 
+- Only copy the folder contaning the labels and not other files to the training folder from CVAT data.
+
 ### Inputs
-- `--images` path to the folder containing all the input images that contain the objects you want the detector to learn to detect.
+- `--files` path to the folder containing all the input images that contain the objects you want the detector to learn to detect.
+- `--keep_all_frames` you can set this argument as True if you want to keep all frames from videos for training, even the ones that do not contain the object you want to train for. By default this argument is set as False, meaning only the frames containing the objects will be used for training.
 - `--labels` path to the folder containing all the label files that contain the coordinates of the objects located in each image along with the class of each object.
 Example of a label file is below:
     ```

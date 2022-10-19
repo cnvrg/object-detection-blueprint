@@ -1,8 +1,8 @@
 ---
 title: Object Detection Training 
 version: 1.0.0 
-description: Train and deploy a model that detects objects in images
-long_description: Train and deploy a model that detects objects in images and videos based on your custom data
+description: "Train and deploy a model that detects objects in images"
+long_description: "Train and deploy a model that detects objects in images and videos based on your custom data"
 
 author: "cnvrg"
 author_email: "info@cnvrg.io"
@@ -10,7 +10,6 @@ author_email: "info@cnvrg.io"
 
 tags:
   - training
-  - s3
 
 
 tasks:
@@ -77,7 +76,7 @@ tasks:
     language: python3
 
     params:
-      - key: images
+      - key: files
         type: 'categorical'
         values:
           - '/input/s3_connector/object_detection_data/images'

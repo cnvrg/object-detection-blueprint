@@ -1,0 +1,33 @@
+---
+title: Object Detection Batch
+version: 1.0.0 
+description: Batch blueprint to run on images and videos stored in a directory. 
+icon: python 
+
+author: "cnvrg"
+author_email: "libhub@cnvrg.io"
+
+
+tags:
+  - training
+
+command: python3 batch_predict.py
+
+requirements:
+  cpu: 3.5
+  memory: 8
+  gpu: 0
+  hpu: 0
+
+image: cnvrg/cnvrg:v5.0
+
+language: python3
+
+arguments:
+  - key: source
+    type: 'categorical'
+    values:
+        - ''
+
+    
+
