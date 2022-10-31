@@ -1,8 +1,8 @@
 ---
 title: Object Detection Inference
 version: 1.0.0
-description: Detect objects elements in images
-long_description: This blueprint allows you to deploy a ready to use API endpoint that can detect obejcts elements in images
+description: Detect objects and their positions in images and videos
+long_description: Detect object elements and their positions in images and videos using a pretrained object-detector model and a custom dataset.
 
 author: "cnvrg"
 author_email: "info@cnvrg.io"

@@ -1,8 +1,8 @@
 ---
 title: Object Detection Batch
-version: 1.0.0 
-description: Batch blueprint for object detection for files in a directory.
-long_description: Blueprint to run object detection on images and videos stored in a directory. 
+version: 1.0.0
+description: Detect objects and their positions in a batch of images and videos stored in a directory.
+long_description: Detect object elements and their positions in a batch of images and videos stored in a directory.
 
 author: "cnvrg"
 author_email: "libhub@cnvrg.io"
