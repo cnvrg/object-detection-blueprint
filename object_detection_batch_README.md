@@ -5,7 +5,7 @@ Click [here](https://github.com/ultralytics/yolov5/blob/master/data/coco.yaml) t
 Click [here]() to view this blueprint's supported video and image formats.
 
 Complete the following steps to run this object-detector blueprint in batch mode:
-1. Click **Use Blueprint** button. The cnvrg Blueprint Flow page displays.
+1. Click the **Use Blueprint** button. The cnvrg Blueprint Flow page displays.
 2. Click the **S3 Connector** task to display its dialog.
    - Within the **Parameters** tab, provide the following Key-Value pair information:
      - Key: `bucketname` − Value: provide the data bucket name
