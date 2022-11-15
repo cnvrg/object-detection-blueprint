@@ -9,7 +9,7 @@ Complete the following steps to deploy this object-detector API endpoint:
    * Use the Try it Live section with any object image to check the model.
    * Use the bottom integration panel to integrate your API with your code by copying in your code snippet.
 
-An API endpoint that detects objects in images has now been deployed. Click [here](link) for detailed instructions to run this blueprint.
+An API endpoint that detects objects in images has now been deployed.
 
 To learn how this blueprint was created, click [here](https://github.com/cnvrg/object-detection-blueprint).
 
