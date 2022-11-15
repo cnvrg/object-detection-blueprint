@@ -24,4 +24,4 @@ Complete the following steps to run this object-detector blueprint in batch mode
 
 A tailored model that detects objects, draws their boundaries, and labels them in images and videos has now been deployed in batch mode.
 
-For detailed instructions on this blueprint's run, click [here](). To learn how this blueprint was created, click [here](https://github.com/cnvrg/object-detection-blueprint).
+To learn how this blueprint was created, click [here](https://github.com/cnvrg/object-detection-blueprint).
