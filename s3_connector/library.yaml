@@ -1,0 +1,70 @@
+# Copyright (c) 2022 Intel Corporation
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of
+# this software and associated documentation files (the "Software"), to deal in
+# the Software without restriction, including without limitation the rights to
+# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+# the Software, and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+# SPDX-License-Identifier: MIT
+
+---
+title: S3 Connector # required on creation, a slug will be generated from the title? -> inference-library
+version: 1.0.0 # required
+description: "Read data from s3" # optional
+icon: python # optional
+
+# Optional properties for crediting authors
+author: "cnvrg"
+author_email: "libhub@cnvrg.io"
+
+# At least one tag [inference, training, data] must be present
+tags:
+  - training
+  - data
+  - connector
+
+# Available only for training (exec tasks) libraries only
+command: python s3-connector.py
+
+# These will replace the "compute" argument, values must be >= 0:
+# We need to add requirement for distributed pods
+requirements:
+  cpu: 3.5
+  memory: 8
+  gpu: 0
+  hpu: 0
+
+# This will replace the "docker_images" argument (?) need to work in cnvrg as well
+image: cnvrg:v5.0
+
+# This will replace "env_setup", currently only python 3 is supported.
+language: python3
+
+arguments:
+  # Training arguments will have type and value, valid types are [discrete, float, integer, categorical]
+  # Empty value will mark the argument as 'required', adding a default value will place it in the flow.
+  - key: endpoint
+    type: 'categorical'
+    values:
+      - 'https://s3.amazonaws.com download'
+  - key: bucketname
+    type: 'categorical'
+    values: []
+  - key: localdir
+    type: 'categorical'
+    values: []
+  - key: prefix
+    type: 'categorical'
+    values: []
