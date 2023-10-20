@@ -8,5 +8,5 @@ For using this pretrained logo detection model, you will need to create a ready-
 
 Congrats! You have deployed an API endpoint that detects object elements in images!
 
-[See here how we created this blueprint](https://github.com/cnvrg/Blueprints/tree/main/Object%20Detection)
+[See here how we created this blueprint](https://github.com/cnvrg/object-detection-blueprint)
 
